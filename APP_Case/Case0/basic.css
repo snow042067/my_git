@@ -1,0 +1,97 @@
+:root {
+	--back_color: red; /* Default value */
+	--heartbeat: 0s; /* Default value */
+}
+
+body {
+	margin: 0;
+	text-align: center;
+}
+
+/* Style the header */
+header {
+    background-color: #7373B9;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+section {
+	padding: 3px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #4F9D9D;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+div.grid1 {
+    background-color: #FFFF93;
+    animation-name: ani_grid1;
+    animation-duration: 5s;
+}
+
+div.grid2 {
+    background-color: #C07AB8;
+    animation-name: ani_grid2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+div.grid3 {
+    background-color: #FF7575;
+    animation:alternate infinite;
+}
+
+div.grid4 {
+    background-color: #02DF82;
+}
+
+/* CSS transform standard syntax */
+@keyframes ani_grid1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes ani_grid2 {
+    0% {
+        background-color: #E2C2DE;
+    }
+    20% {
+        background-color: #D2A2CC;
+    }
+    40% {
+        background-color: #C07AB8;
+    }
+    60% {
+        background-color: #AE57A4;
+    }
+    80% {
+        background-color: #8F4586;
+    }
+    100% {
+        background-color: #6C3365;
+    }
+}
+
+@keyframes ani_grid {
+    0% {transform:rotate(0);}
+
+    50% {transform:translateX(-100%) rotate(180deg);}
+
+    100% {transform: translateX(100%) rotate(360deg);}
+}
+
+.fas {
+	animation-name: heartbeat;
+    animation-duration: var(--heartbeat);
+	animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat {
+	from {transform: scale(1,1); color: white;}
+	to {transform: scale(1.2,1.2); color: red;}
+}
